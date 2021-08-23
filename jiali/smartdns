@@ -1,0 +1,362 @@
+
+config smartdns
+	option server_name 'smartdns'
+	option port '6053'
+	option dualstack_ip_selection '0'
+	option rr_ttl_min '300'
+	option seconddns_port '7053'
+	option seconddns_tcp_server '1'
+	option seconddns_no_speed_check '0'
+	option seconddns_no_rule_addr '0'
+	option seconddns_no_rule_nameserver '0'
+	option seconddns_no_rule_ipset '0'
+	option seconddns_no_rule_soa '0'
+	option seconddns_no_cache '0'
+	option coredump '0'
+	option ipv6_server '0'
+	option prefetch_domain '1'
+	option redirect 'dnsmasq-upstream'
+	option enabled '1'
+	option seconddns_server_group 'oversea'
+	option seconddns_no_dualstack_selection '1'
+	option cache_size '8000'
+	option tcp_server '1'
+	option serve_expired '1'
+	option rr_ttl '43200'
+	option force_aaaa_soa '0'
+	list old_redirect 'dnsmasq-upstream'
+	list old_port '6053'
+	list old_enabled '1'
+
+config server
+	option type 'udp'
+	option name '移动DNS1'
+	option ip '183.221.253.100'
+	option port '53'
+	option enabled '1'
+
+config server
+	option ip '183.221.253.100'
+	option port '53'
+	option type 'tcp'
+	option name '移动DNS1#'
+	option enabled '1'
+
+config server
+	option type 'udp'
+	option name '移动DNS2'
+	option ip '211.137.96.205'
+	option port '53'
+	option enabled '1'
+
+config server
+	option name '移动DNS2#'
+	option ip '211.137.96.205'
+	option port '53'
+	option type 'tcp'
+	option enabled '1'
+
+config server
+	option type 'udp'
+	option name '电信DNS1'
+	option ip '218.6.200.139'
+	option port '53'
+	option blacklist_ip '0'
+	option enabled '0'
+
+config server
+	option name '电信DNS1#'
+	option ip '218.6.200.139'
+	option port '53'
+	option type 'tcp'
+	option enabled '0'
+
+config server
+	option type 'udp'
+	option name '电信DNS2'
+	option ip '61.139.2.69'
+	option port '53'
+	option enabled '0'
+
+config server
+	option name '电信DNS2#'
+	option ip '61.139.2.69'
+	option port '53'
+	option type 'tcp'
+	option enabled '0'
+
+config server
+	option type 'udp'
+	option name '电信DNS3'
+	option ip '202.98.96.68'
+	option port '53'
+	option enabled '0'
+
+config server
+	option name '电信DNS3#'
+	option ip '202.98.96.68'
+	option port '53'
+	option type 'tcp'
+	option enabled '0'
+
+config server
+	option enabled '1'
+	option type 'udp'
+	option name '114DNS1'
+	option ip '114.114.114.114'
+	option port '53'
+
+config server
+	option name '114DNS1#'
+	option ip '114.114.114.114'
+	option port '53'
+	option type 'tcp'
+	option enabled '1'
+
+config server
+	option enabled '1'
+	option name '114DNS1##'
+	option ip '114.114.114.114'
+	option port '53'
+	option type 'https'
+
+config server
+	option enabled '1'
+	option type 'udp'
+	option name '114DNS2'
+	option ip '114.114.115.115'
+	option port '53'
+
+config server
+	option name '114DNS2#'
+	option ip '114.114.115.115'
+	option port '53'
+	option type 'tcp'
+	option enabled '1'
+
+config server
+	option enabled '1'
+	option type 'udp'
+	option name '阿里DNS1'
+	option ip '223.5.5.5'
+	option port '53'
+
+config server
+	option name '阿里DNS1#'
+	option ip '223.5.5.5'
+	option port '53'
+	option type 'tcp'
+	option enabled '1'
+
+config server
+	option enabled '1'
+	option type 'udp'
+	option name '阿里DNS2'
+	option ip '223.6.6.6'
+	option port '53'
+
+config server
+	option name '阿里DNS2#'
+	option ip '223.6.6.6'
+	option port '53'
+	option type 'tcp'
+	option enabled '1'
+
+config server
+	option enabled '1'
+	option type 'udp'
+	option name '百度DNS'
+	option ip '180.76.76.76'
+	option port '53'
+
+config server
+	option name '百度DNS#'
+	option ip '180.76.76.76'
+	option port '53'
+	option type 'tcp'
+	option enabled '1'
+
+config server
+	option enabled '1'
+	option type 'udp'
+	option name '腾讯DNS'
+	option ip '119.29.29.29'
+	option port '53'
+
+config server
+	option name '腾讯DNS#'
+	option ip '119.29.29.29'
+	option port '53'
+	option type 'tcp'
+	option enabled '1'
+
+config server
+	option enabled '1'
+	option type 'udp'
+	option ip '8.8.8.8'
+	option port '53'
+	option name '谷歌DNS1'
+
+config server
+	option name '谷歌DNS1#'
+	option ip '8.8.8.8'
+	option port '53'
+	option type 'tcp'
+	option enabled '1'
+
+config server
+	option enabled '1'
+	option type 'udp'
+	option name '谷歌DNS2'
+	option ip '8.8.4.4'
+	option port '53'
+
+config server
+	option name '谷歌DNS2#'
+	option ip '8.8.4.4'
+	option port '53'
+	option type 'tcp'
+	option enabled '1'
+
+config server
+	option enabled '1'
+	option type 'udp'
+	option name 'Z1'
+	option ip '208.67.220.220'
+	option port '53'
+
+config server
+	option name 'Z1#'
+	option ip '208.67.220.220'
+	option port '53'
+	option type 'tcp'
+	option enabled '1'
+
+config server
+	option enabled '1'
+	option type 'udp'
+	option name 'Z2'
+	option ip '208.67.220.222'
+	option port '53'
+
+config server
+	option name 'Z2#'
+	option ip '208.67.220.222'
+	option port '53'
+	option type 'tcp'
+	option enabled '1'
+
+config server
+	option enabled '1'
+	option type 'udp'
+	option name 'Z3'
+	option ip '1.1.1.1'
+	option port '53'
+
+config server
+	option name 'Z3#'
+	option ip '1.1.1.1'
+	option port '53'
+	option type 'tcp'
+	option enabled '1'
+
+config server
+	option enabled '1'
+	option type 'udp'
+	option name 'z4'
+	option ip '101.226.4.6'
+	option port '53'
+
+config server
+	option name 'z4#'
+	option ip '101.226.4.6'
+	option port '53'
+	option type 'tcp'
+	option enabled '1'
+
+config server
+	option enabled '1'
+	option type 'udp'
+	option name 'z5'
+	option ip '199.85.126.10'
+	option port '53'
+
+config server
+	option name 'Z5#'
+	option ip '199.85.126.10'
+	option port '53'
+	option type 'tcp'
+	option enabled '1'
+
+config server
+	option type 'udp'
+	option name 'H谷歌1'
+	option ip '8.8.8.8'
+	option port '53'
+	option server_group 'oversea'
+	option blacklist_ip '0'
+	option enabled '0'
+
+config server
+	option name 'H谷歌1#'
+	option ip '8.8.8.8'
+	option port '53'
+	option type 'tcp'
+	option server_group 'oversea'
+	option blacklist_ip '0'
+	option enabled '0'
+
+config server
+	option type 'udp'
+	option ip '8.8.4.4'
+	option port '53'
+	option name 'H谷歌2'
+	option server_group 'oversea'
+	option blacklist_ip '0'
+	option enabled '0'
+
+config server
+	option name 'H谷歌2#'
+	option ip '8.8.4.4'
+	option port '53'
+	option type 'tcp'
+	option server_group 'oversea'
+	option blacklist_ip '0'
+	option enabled '0'
+
+config server
+	option type 'udp'
+	option name 'HZ1'
+	option port '53'
+	option server_group 'oversea'
+	option blacklist_ip '0'
+	option ip '208.67.220.220'
+	option enabled '0'
+
+config server
+	option name 'HZ1#'
+	option port '53'
+	option type 'tcp'
+	option server_group 'oversea'
+	option blacklist_ip '0'
+	option ip '208.67.220.220'
+	option enabled '0'
+
+config server
+	option type 'udp'
+	option name 'HZ2'
+	option ip '208.67.220.222'
+	option port '53'
+	option server_group 'oversea'
+	option blacklist_ip '0'
+	option enabled '0'
+
+config server
+	option name 'HZ2#'
+	option ip '208.67.220.222'
+	option port '53'
+	option type 'tcp'
+	option server_group 'oversea'
+	option blacklist_ip '0'
+	option enabled '0'
+
