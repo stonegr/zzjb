@@ -143,20 +143,8 @@ install_v2-ui() {
     fi
 
     if  [ $# == 0 ] ;then
-        last_version=$(curl -Ls "https://api.github.com/repos/tszho.t/v2-ui/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
-        if [[ ! -n "$last_version" ]]; then
-            echo -e "${red}检测 v2-ui 版本失败，可能是超出 Github API 限制，请稍后再试，或手动指定 v2-ui 版本安装${plain}"
-            exit 1
-        fi
-        echo -e "检测到 v2-ui 最新版本：5.5.2，开始安装"
-        wget -N --no-check-certificate -O /usr/local/v2-ui-linux-5.5.2.tar.gz https://github.com/tszho-t/v2-ui/releases/download/5.5.2/v2-ui-linux-5.5.2.tar.gz
-        if [[ $? -ne 0 ]]; then
-            echo -e "${red}下载 v2-ui 失败，请确保你的服务器能够下载 Github 的文件${plain}"
-            exit 1
-        fi
-    else
         last_version=5.5.2
-        url="https://github.com/tszho-t/v2-ui/releases/download/5.5.2/v2-ui-linux-5.5.2.tar.gz"
+        url="https://github.com/stonegr/zzjb/releases/download/sw/v2-ui-linux-5.5.2.tar.gz"
         echo -e "开始安装 v2-ui v5.5.2"
         wget -N --no-check-certificate -O /usr/local/v2-ui-linux-5.5.2.tar.gz ${url}
         if [[ $? -ne 0 ]]; then
